@@ -1,0 +1,127 @@
+						HOMEWORK 1
+
+INTRODUCTION
+
+Say "Hello, World!" With Python
+
+print ("Hello, World!")
+
+Python If-Else
+
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+n = int(raw_input().strip())
+
+if n%2 != 0:
+  print ("Weird")
+else:
+    if 2<=n<=5:
+      print ("Not Weird")
+    elif 6<=n<=20:
+      print("Weird")
+    elif n>20:
+      print("Not Weird")
+
+Arithmetic Operators
+
+a = int(raw_input())
+b = int(raw_input())
+
+print (a + b)
+print (a - b)
+print (a * b)
+
+Python: Division
+
+import division
+
+a = int(raw_input())
+b = int(raw_input())
+
+print (a//b)
+print (a/b)
+
+Loops
+
+n = int(raw_input())
+
+for i in range(n):
+    print i*i
+
+Write a function
+
+def is_leap(year):
+    leap = False
+
+    if year%4==0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            return False
+        return True
+    else:
+        return False
+    return leap
+
+Print Function
+
+import print_function
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    list = []
+    number = 1
+    string = "" 
+    for x in range(n):
+        list.append(number)
+        number += 1
+    for x in list:
+        string += str(x)
+    print(string)
+
+STRINGS
+
+String Split and Join
+
+def split_and_join(line):
+    a=line.split(" ") 
+    a='-'.join(a)    
+    return a
+
+What's Your Name?
+
+def print_full_name(a, b):
+    print "Hello " + a + " " + b + "! You just delved into python."
+
+EXCEPTIONS
+
+S = int(raw_input())
+a = []
+for i in range(S):
+    a.append(raw_input().split())
+for j in range(len(a)):
+    try:
+        print int(a[j][0])//int(a[j][1])
+    except ZeroDivisionError as error:
+        print "Error Code:", error
+    except ValueError as error2:
+        print "Error Code:", error2
+
+
+DATE AND TIME
+
+Calendar Module:
+
+import calendar
+k = map(int,raw_input().split())
+m = calendar.weekday(k[2],k[0],k[1])
+w = ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY']
+
+print w[m]
+
